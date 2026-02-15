@@ -1,86 +1,181 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bruno Yan — Portfólio</title>
+  <title>Ana Júlia da Silva | Petroleum Engineer</title>
   <style>
-    :root { --bg:#0b0f14; --card:#121826; --txt:#e8eef7; --mut:#9fb0c3; }
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt);}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px;}
-    header{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
-    .title h1{margin:0;font-size:32px;}
-    .title p{margin:6px 0 0;color:var(--mut);max-width:60ch;}
-    .btns a{display:inline-block;margin:6px 10px 0 0;padding:10px 12px;border-radius:10px;
-      background:var(--card);color:var(--txt);text-decoration:none;border:1px solid #233044;}
-    .btns a:hover{border-color:#3b5475;}
-    h2{margin:28px 0 12px;font-size:20px;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
-    .card{background:var(--card);border:1px solid #233044;border-radius:14px;padding:14px;}
-    .card h3{margin:0 0 6px;font-size:16px;}
-    .card p{margin:0;color:var(--mut);line-height:1.35;}
-    .meta{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;}
-    .tag{font-size:12px;color:var(--mut);border:1px solid #233044;padding:4px 8px;border-radius:999px;}
-    footer{margin:28px 0 10px;color:var(--mut);font-size:14px;}
-    .link{color:var(--txt);text-decoration:underline;}
+    :root {
+      --bg:#f4f6f9;
+      --card:#ffffff;
+      --primary:#1c2e4a;
+      --accent:#1f4e79;
+      --mut:#5a6a7f;
+    }
+    body{
+      margin:0;
+      font-family:Segoe UI, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--primary);
+    }
+    .wrap{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 20px;
+    }
+    header{
+      border-bottom:2px solid #d9e1ec;
+      padding-bottom:20px;
+      margin-bottom:30px;
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+    }
+    .subtitle{
+      margin-top:6px;
+      color:var(--mut);
+      font-size:15px;
+    }
+    .contact{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--mut);
+    }
+    h2{
+      margin-top:35px;
+      font-size:18px;
+      border-left:4px solid var(--accent);
+      padding-left:10px;
+    }
+    .card{
+      background:var(--card);
+      padding:18px;
+      margin-top:15px;
+      border:1px solid #d9e1ec;
+      border-radius:6px;
+    }
+    .job-title{
+      font-weight:600;
+    }
+    .company{
+      color:var(--accent);
+      font-size:14px;
+    }
+    ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    li{
+      margin-bottom:6px;
+      font-size:14px;
+      color:#2e3b4e;
+    }
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+    .tag{
+      background:#e6eef7;
+      padding:6px 10px;
+      font-size:13px;
+      border-radius:4px;
+      color:#1c2e4a;
+    }
+    footer{
+      margin-top:40px;
+      font-size:13px;
+      color:var(--mut);
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+
     <header>
-      <div class="title">
-        <h1>Bruno Yan</h1>
-        <p>Desenvolvedor (Flutter / Firebase / CUDA). Portfólio com projetos selecionados e links.</p>
+      <h1>Ana Júlia da Silva</h1>
+      <div class="subtitle">
+        Petroleum Engineer | MSc Candidate in Mechanical Engineering
       </div>
-      <div class="btns">
-        <a href="https://github.com/SEU_GITHUB" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank">LinkedIn</a>
-        <a href="mailto:SEU_EMAIL">Email</a>
+      <div class="contact">
+        Balneário Camboriú, SC – Brazil | anajuliasilvareal@.com
       </div>
     </header>
 
-    <h2>Projetos</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Marketplace de Aluguel de Ferramentas</h3>
-        <p>App Flutter com calendário, favoritos e chat. Backend com Firebase e Cloud Functions.</p>
-        <div class="meta">
-          <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Cloud Functions</span>
-          <a class="link" href="LINK_DO_REPO_OU_DEMO" target="_blank">Ver</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Tesouro de Camboriú</h3>
-        <p>Jogo de enigmas em forma de poema para descobrir localizações/pontos turísticos.</p>
-        <div class="meta">
-          <span class="tag">Flutter</span><span class="tag">Mobile</span>
-          <a class="link" href="LINK" target="_blank">Ver</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Projeto LBM (CUDA)</h3>
-        <p>Implementação CUDA de LBM com framework de condições de contorno (RBC) e foco em desempenho.</p>
-        <div class="meta">
-          <span class="tag">CUDA</span><span class="tag">C++</span><span class="tag">LBM</span>
-          <a class="link" href="LINK" target="_blank">Ver</a>
-        </div>
-      </div>
+    <h2>Professional Profile</h2>
+    <div class="card">
+      Petroleum Engineer with experience in drilling engineering, well planning, operational cost control, 
+      and regulatory management. Currently pursuing a Master’s degree focused on fluid mechanics 
+      and subsea oil spill mitigation systems. Strong background in upstream operations, 
+      data analysis, and technical documentation.
     </div>
 
-    <h2>Habilidades</h2>
-    <div class="meta">
-      <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span>
-      <span class="tag">Node.js</span><span class="tag">APIs</span><span class="tag">C++</span>
-      <span class="tag">CUDA</span>
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+      <div class="job-title">Drilling Engineering Intern</div>
+      <div class="company">Origem Energia | Aug 2019 – Present | Rio de Janeiro, RJ</div>
+      <ul>
+        <li>Development of drilling programs and operational schedules for onshore wells.</li>
+        <li>Preparation of AFEs and detailed operational time calculations.</li>
+        <li>Well correlation analysis and support in trajectory and schematic definition.</li>
+        <li>Management of well databases and regulatory updates in the ANP system.</li>
+        <li>Equipment control and procurement processes using SAP.</li>
+        <li>Operational cost monitoring and budget tracking.</li>
+      </ul>
     </div>
 
-    <h2>Contato</h2>
+    <div class="card">
+      <div class="job-title">Research Intern</div>
+      <div class="company">CERTI Foundation | Sep 2023 – Nov 2023 | Florianópolis, SC</div>
+      <ul>
+        <li>Structural integrity analysis and submarine digital twin development.</li>
+        <li>Python-based data modeling and algorithm development.</li>
+        <li>Technical documentation and version control management.</li>
+      </ul>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="card">
+      <strong>MSc in Mechanical Engineering</strong><br>
+      Santa Catarina State University (2024–2026)<br>
+      Focus: Fluid Mechanics, Advanced Statistical Methods, Control Systems.
+    </div>
+
+    <div class="card">
+      <strong>BSc in Petroleum Engineering</strong><br>
+      Santa Catarina State University (2019–2024)<br>
+      Focus: Reservoir Engineering, Drilling, Well Construction, Flow Assurance.
+    </div>
+
+    <h2>Technical Competencies</h2>
+    <div class="skills">
+      <span class="tag">Drilling Engineering</span>
+      <span class="tag">Well Planning</span>
+      <span class="tag">AFE Preparation</span>
+      <span class="tag">SAP</span>
+      <span class="tag">ANP System</span>
+      <span class="tag">Python</span>
+      <span class="tag">Excel (Advanced)</span>
+      <span class="tag">OpenFlow</span>
+      <span class="tag">ALFAsim</span>
+      <span class="tag">GitHub</span>
+    </div>
+
+    <h2>Professional Activities</h2>
+    <div class="card">
+      Active member of SPE UDESC Student Chapter. PetroBowl competitor at national 
+      and international levels. Experience in technical event coordination and 
+      student-led engineering initiatives.
+    </div>
+
     <footer>
-      Email: <a class="link" href="mailto:SEU_EMAIL">SEU_EMAIL</a> ·
-      LinkedIn: <a class="link" href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank">/SEU_LINKEDIN</a>
+      English: B2 | Available for upstream, drilling and engineering roles.
     </footer>
+
   </div>
 </body>
 </html>
