@@ -1,468 +1,239 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ana Júlia da Silva | Engenharia (Portfólio)</title>
-  <style>
-    /* =========================
-       Identidade visual (engenharia)
-       - Clean, harmonia, clareza, compromisso
-       ========================= */
-    :root{
-      /* Base */
-      --bg: #f6f8fb;
-      --surface: #ffffff;
-      --line: #d9e2ef;
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ana Júlia da Silva | Engenharia</title>
 
-      /* Texto */
-      --text: #0f1f33;
-      --muted: #51637a;
+<style>
+:root{
+  --bg: #F6F9F7;
+  --surface: #FFFFFF;
+  --primary: #1F3D2B;      /* verde profundo */
+  --secondary: #2E6F4E;    /* verde técnico */
+  --light: #EAF3ED;        /* fundo suave */
+  --muted: #4F5B57;        /* cinza técnico */
+  --border: #DCE7E1;
+  --shadow: 0 6px 18px rgba(0,0,0,0.05);
+  --radius: 10px;
+}
 
-      /* Acentos (engenharia / corporativo) */
-      --navy: #163a5f;      /* seriedade / comprometimento */
-      --teal: #1f6f78;      /* harmonia / técnica */
-      --sky:  #e8f1f8;      /* leveza / clean */
-      --chip: #eef3f8;
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--primary);
+  line-height:1.5;
+}
 
-      /* Sombra sutil */
-      --shadow: 0 6px 20px rgba(15, 31, 51, 0.08);
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
 
-      /* Layout */
-      --radius: 12px;
-      --pad: 18px;
-      --max: 1080px;
-    }
+header{
+  background:var(--surface);
+  padding:28px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
 
-    *{ box-sizing: border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.45;
-    }
+h1{
+  margin:0;
+  font-size:28px;
+  letter-spacing:0.5px;
+}
 
-    a{ color: var(--navy); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+.subtitle{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:14px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 26px 18px 46px;
-    }
+.contact{
+  margin-top:8px;
+  font-size:13px;
+  color:var(--muted);
+}
 
-    /* Top bar / Header */
-    .top{
-      background: linear-gradient(135deg, var(--sky), #ffffff);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
+h2{
+  margin-top:40px;
+  font-size:18px;
+  border-left:4px solid var(--secondary);
+  padding-left:10px;
+  letter-spacing:0.3px;
+}
 
-    .top-row{
-      display:flex;
-      gap:16px;
-      align-items:flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+.section{
+  margin-top:15px;
+  background:var(--surface);
+  padding:20px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
 
-    .name{
-      margin:0;
-      font-size: 26px;
-      letter-spacing: 0.2px;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+  margin-top:10px;
+}
 
-    .role{
-      margin:6px 0 0;
-      color: var(--muted);
-      max-width: 72ch;
-      font-size: 14.5px;
-    }
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:#fff;
+  transition:0.2s ease;
+}
 
-    .actions{
-      display:flex;
-      gap:10px;
-      flex-wrap: wrap;
-      align-items:center;
-    }
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.07);
+}
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 12px;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--navy);
-      font-size: 14px;
-      font-weight: 600;
-    }
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  background:var(--light);
+}
 
-    .btn.primary{
-      background: var(--navy);
-      border-color: var(--navy);
-      color: #fff;
-    }
+.card-body{
+  padding:15px;
+}
 
-    .btn:hover{
-      text-decoration:none;
-      filter: brightness(0.98);
-    }
+.card-title{
+  margin:0;
+  font-size:15px;
+  font-weight:600;
+  color:var(--primary);
+}
 
-    .meta{
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 13.5px;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items:center;
-    }
+.card-desc{
+  margin-top:6px;
+  font-size:13px;
+  color:var(--muted);
+}
 
-    .dot{
-      width:6px; height:6px; border-radius:50%;
-      background: var(--teal);
-      display:inline-block;
-      margin-right: 8px;
-      transform: translateY(-1px);
-    }
+.tags{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
 
-    /* Seções */
-    .section{
-      margin-top: 22px;
-    }
+.tag{
+  background:var(--light);
+  color:var(--secondary);
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:20px;
+  border:1px solid var(--border);
+}
 
-    .section-header{
-      display:flex;
-      align-items:flex-end;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin: 18px 4px 10px;
-    }
+a{
+  color:var(--secondary);
+  text-decoration:none;
+  font-weight:500;
+}
 
-    .section-title{
-      margin:0;
-      font-size: 18px;
-      letter-spacing: 0.2px;
-    }
+a:hover{
+  text-decoration:underline;
+}
 
-    .section-subtitle{
-      margin:0;
-      color: var(--muted);
-      font-size: 13.5px;
-      max-width: 80ch;
-    }
-
-    .panel{
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: var(--pad);
-      box-shadow: var(--shadow);
-    }
-
-    /* Grade de projetos */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .card{
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
-      transition: transform 0.12s ease, box-shadow 0.12s ease;
-    }
-
-    .card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 10px 26px rgba(15, 31, 51, 0.10);
-    }
-
-    .card-media{
-      width:100%;
-      aspect-ratio: 16/9;
-      background: #f0f4f8;
-      border-bottom: 1px solid var(--line);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color: #7a8ba2;
-      font-size: 13px;
-    }
-
-    .card-media img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-    }
-
-    .card-body{
-      padding: 14px;
-    }
-
-    .card-title{
-      margin:0;
-      font-size: 15px;
-      color: var(--navy);
-      letter-spacing: 0.1px;
-    }
-
-    .card-desc{
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 13.5px;
-    }
-
-    .chips{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .chip{
-      background: var(--chip);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 12.5px;
-      color: #2a3b52;
-      white-space: nowrap;
-    }
-
-    .card-links{
-      margin-top: 10px;
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      font-size: 13.5px;
-      font-weight: 600;
-    }
-
-    /* Rodapé */
-    footer{
-      margin-top: 26px;
-      color: var(--muted);
-      font-size: 13px;
-      padding: 6px 2px;
-      display:flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    /* Pequenos ajustes mobile */
-    @media (max-width: 520px){
-      .name{ font-size: 22px; }
-      .top{ padding: 18px; }
-    }
-  </style>
+footer{
+  margin-top:50px;
+  font-size:13px;
+  color:var(--muted);
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <!-- Header / Identidade -->
-    <div class="top">
-      <div class="top-row">
-        <div>
-          <h1 class="name">Ana Júlia da Silva</h1>
-          <p class="role">
-            Engenheira de Petróleo (BSc) e Mestranda em Engenharia Mecânica (UDESC).
-            Experiência em planejamento e suporte a operações de poços, com interesse em engenharia de poços,
-            integridade/estruturas e aplicações em sistemas submarinos.
-          </p>
+<header>
+  <h1>Ana Júlia da Silva</h1>
+  <div class="subtitle">
+    Engenheira de Petróleo | Mestranda em Engenharia Mecânica
+  </div>
+  <div class="contact">
+    Balneário Camboriú, SC – Brasil | anajuliasilvareal@.com
+  </div>
+</header>
+
+<h2>Projetos — Graduação</h2>
+<div class="section">
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/projeto1.jpg" alt="Projeto Graduação">
+      <div class="card-body">
+        <div class="card-title">Título do Projeto</div>
+        <div class="card-desc">
+          Descrição objetiva do projeto desenvolvido na graduação.
         </div>
-
-        <div class="actions">
-          <a class="btn primary" href="mailto:anajuliasilvareal@.com">Email</a>
-          <a class="btn" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        <div class="tags">
+          <div class="tag">Reservatórios</div>
+          <div class="tag">Análise</div>
         </div>
-      </div>
-
-      <div class="meta">
-        <span><span class="dot"></span>Balneário Camboriú, SC — Brasil</span>
-        <span><span class="dot"></span>Inglês: B2</span>
-        <span><span class="dot"></span>Foco: engenharia aplicada (poços / upstream / pesquisa)</span>
       </div>
     </div>
 
-    <!-- Seção: Projetos Graduação -->
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Projetos — Graduação</h2>
-          <p class="section-subtitle">Projetos acadêmicos, trabalhos técnicos e materiais desenvolvidos durante a graduação.</p>
+  </div>
+</div>
+
+<h2>Projetos — Mestrado</h2>
+<div class="section">
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/projeto2.jpg" alt="Projeto Mestrado">
+      <div class="card-body">
+        <div class="card-title">Mitigação de Vazamento Submarino</div>
+        <div class="card-desc">
+          Desenvolvimento de sistema experimental e modelagem.
+        </div>
+        <div class="tags">
+          <div class="tag">Controle</div>
+          <div class="tag">Subsea</div>
         </div>
       </div>
-
-      <div class="panel">
-        <div class="grid">
-
-          <!-- CARD EXEMPLO 1 -->
-          <article class="card">
-            <div class="card-media">
-              <!-- Para usar foto: coloque uma imagem na pasta do repo (ex: /assets/projeto1.jpg) e troque o bloco abaixo por <img ...> -->
-              Placeholder de imagem (16:9)
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Título do Projeto 1</h3>
-              <p class="card-desc">
-                Texto curto: objetivo, abordagem e resultado principal (2–3 linhas).
-              </p>
-              <div class="chips">
-                <span class="chip">Reservatórios</span>
-                <span class="chip">Análise</span>
-                <span class="chip">Relatório Técnico</span>
-              </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noreferrer">PDF/Relatório</a>
-                <a href="#" target="_blank" rel="noreferrer">Repositório</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD EXEMPLO 2 -->
-          <article class="card">
-            <div class="card-media">Placeholder de imagem (16:9)</div>
-            <div class="card-body">
-              <h3 class="card-title">Título do Projeto 2</h3>
-              <p class="card-desc">
-                Texto curto: o que foi feito e quais ferramentas foram usadas.
-              </p>
-              <div class="chips">
-                <span class="chip">Flow Assurance</span>
-                <span class="chip">ALFAsim</span>
-              </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noreferrer">Descrição</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção: Projetos Mestrado -->
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">Projetos — Mestrado</h2>
-          <p class="section-subtitle">Pesquisa, desenvolvimento e resultados em andamento no mestrado.</p>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="grid">
-
-          <article class="card">
-            <div class="card-media">Placeholder de imagem (16:9)</div>
-            <div class="card-body">
-              <h3 class="card-title">Mitigação de vazamento submarino (bench experimental)</h3>
-              <p class="card-desc">
-                Desenvolvimento de método e sistema de controle para bancada experimental de teste.
-                (Descreva: problema, hipótese, metodologia e status.)
-              </p>
-              <div class="chips">
-                <span class="chip">Controle</span>
-                <span class="chip">Sistemas Submarinos</span>
-                <span class="chip">Experimentação</span>
-              </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noreferrer">Resumo</a>
-                <a href="#" target="_blank" rel="noreferrer">Fotos</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media">Placeholder de imagem (16:9)</div>
-            <div class="card-body">
-              <h3 class="card-title">Título do Projeto 2 (Mestrado)</h3>
-              <p class="card-desc">Texto curto (2–3 linhas). Foque em contribuição e status.</p>
-              <div class="chips">
-                <span class="chip">Modelagem</span>
-                <span class="chip">Python</span>
-              </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noreferrer">Material</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção: CCS / CCUS -->
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">CCS / CCUS — Curso e Aplicações</h2>
-          <p class="section-subtitle">Conteúdos, resumos técnicos e aplicações relacionados ao curso de Carbon Capture and Storage.</p>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="grid">
-
-          <article class="card">
-            <div class="card-media">Placeholder de imagem (16:9)</div>
-            <div class="card-body">
-              <h3 class="card-title">Resumo Técnico — Tecnologias de Captura de CO₂</h3>
-              <p class="card-desc">
-                Síntese objetiva do conteúdo (pós-combustão, pré-combustão, oxy-fuel), com pontos-chave e limitações.
-              </p>
-              <div class="chips">
-                <span class="chip">CCUS</span>
-                <span class="chip">Captura</span>
-                <span class="chip">Regulação</span>
-              </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media">Placeholder de imagem (16:9)</div>
-            <div class="card-body">
-              <h3 class="card-title">Armazenamento — Mecanismos e Riscos</h3>
-              <p class="card-desc">
-                Estrutura de tópicos sobre armazenamento geológico, monitoramento e riscos (vazamento, integridade).
-              </p>
-              <div class="chips">
-                <span class="chip">Storage</span>
-                <span class="chip">Integridade</span>
-                <span class="chip">Monitoramento</span>
-              </div>
-              <div class="card-links">
-                <a href="#" target="_blank" rel="noreferrer">Notas</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <span>Contato: <a href="mailto:anajuliasilvareal@.com">anajuliasilvareal@.com</a></span>
-      <span>Atualizado manualmente via GitHub Pages</span>
-    </footer>
+    </div>
 
   </div>
+</div>
+
+<h2>CCS / CCUS</h2>
+<div class="section">
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/ccs.jpg" alt="CCS">
+      <div class="card-body">
+        <div class="card-title">Carbon Capture & Storage</div>
+        <div class="card-desc">
+          Resumos técnicos e aplicações do curso de CCUS.
+        </div>
+        <div class="tags">
+          <div class="tag">CO₂</div>
+          <div class="tag">Storage</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+Atualizado via GitHub Pages.
+</footer>
+
+</div>
 </body>
 </html>
