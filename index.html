@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bruno Yan — Portfólio</title>
+  <style>
+    :root { --bg:#0b0f14; --card:#121826; --txt:#e8eef7; --mut:#9fb0c3; }
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt);}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px;}
+    header{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+    .title h1{margin:0;font-size:32px;}
+    .title p{margin:6px 0 0;color:var(--mut);max-width:60ch;}
+    .btns a{display:inline-block;margin:6px 10px 0 0;padding:10px 12px;border-radius:10px;
+      background:var(--card);color:var(--txt);text-decoration:none;border:1px solid #233044;}
+    .btns a:hover{border-color:#3b5475;}
+    h2{margin:28px 0 12px;font-size:20px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+    .card{background:var(--card);border:1px solid #233044;border-radius:14px;padding:14px;}
+    .card h3{margin:0 0 6px;font-size:16px;}
+    .card p{margin:0;color:var(--mut);line-height:1.35;}
+    .meta{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;}
+    .tag{font-size:12px;color:var(--mut);border:1px solid #233044;padding:4px 8px;border-radius:999px;}
+    footer{margin:28px 0 10px;color:var(--mut);font-size:14px;}
+    .link{color:var(--txt);text-decoration:underline;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Bruno Yan</h1>
+        <p>Desenvolvedor (Flutter / Firebase / CUDA). Portfólio com projetos selecionados e links.</p>
+      </div>
+      <div class="btns">
+        <a href="https://github.com/SEU_GITHUB" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank">LinkedIn</a>
+        <a href="mailto:SEU_EMAIL">Email</a>
+      </div>
+    </header>
+
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Marketplace de Aluguel de Ferramentas</h3>
+        <p>App Flutter com calendário, favoritos e chat. Backend com Firebase e Cloud Functions.</p>
+        <div class="meta">
+          <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Cloud Functions</span>
+          <a class="link" href="LINK_DO_REPO_OU_DEMO" target="_blank">Ver</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Tesouro de Camboriú</h3>
+        <p>Jogo de enigmas em forma de poema para descobrir localizações/pontos turísticos.</p>
+        <div class="meta">
+          <span class="tag">Flutter</span><span class="tag">Mobile</span>
+          <a class="link" href="LINK" target="_blank">Ver</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Projeto LBM (CUDA)</h3>
+        <p>Implementação CUDA de LBM com framework de condições de contorno (RBC) e foco em desempenho.</p>
+        <div class="meta">
+          <span class="tag">CUDA</span><span class="tag">C++</span><span class="tag">LBM</span>
+          <a class="link" href="LINK" target="_blank">Ver</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Habilidades</h2>
+    <div class="meta">
+      <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span>
+      <span class="tag">Node.js</span><span class="tag">APIs</span><span class="tag">C++</span>
+      <span class="tag">CUDA</span>
+    </div>
+
+    <h2>Contato</h2>
+    <footer>
+      Email: <a class="link" href="mailto:SEU_EMAIL">SEU_EMAIL</a> ·
+      LinkedIn: <a class="link" href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank">/SEU_LINKEDIN</a>
+    </footer>
+  </div>
+</body>
+</html>
